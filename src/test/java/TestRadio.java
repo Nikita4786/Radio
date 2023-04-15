@@ -2,6 +2,20 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestRadio {
+
+    @Test
+    public void test() {
+        Radio radio = new Radio(9);
+
+        radio.setCurrentStation(8);
+
+        int expected = 8;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
     @Test
     public void shouldSetCurrentStationMin1() {
         Radio radio = new Radio();
